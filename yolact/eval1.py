@@ -1093,7 +1093,7 @@ class Visualizer(PipelineProcessor):
 
         # drawing top block with counts
         cv2.rectangle(img, (0, 0), (img.shape[1], 50), (0, 0, 0), cv2.FILLED)
-        cv2.putText(img, ("Vehicles passed: {total} ".format(total=vehicle_count)), (30, 30),
+        cv2.putText(img, ("Vehicles passed: Cars:{cars} Buses:{busses} Trucks:{trucks}".format(cars=vehicle_count[2],busses = vehicle_count[5],trucks = vehicle_count[7])), (30, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 1)
         return img
 
